@@ -22,10 +22,25 @@ html {
 }
 
 body {
-    background: linear-gradient(110deg, #2e08ba, #b90f0f, black);
+    background: linear-gradient(110deg, #2e08ba, #b90f0f, black) no-repeat;
+    background-size: 300% 300%;
     color: var(--text-color);
-    height: 100vh; /* Ajoutez cette ligne pour définir une hauteur de 100% de la vue */
+    height: 100vh;
     z-index: -100;
+    animation: gradientAnimation 15s infinite;
+}
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 section {
@@ -41,6 +56,7 @@ section {
     background: var(--bg-nav);
     align-items: center;
     justify-content: space-between;
+    z-index: 1000;
 }
 
 .navbar a {
@@ -100,10 +116,10 @@ section {
     flex-direction: column;
 }
 
-.title {
+.main-title {
     display: flex;
     text-align: center;
-    margin-top: 2.5rem;
+    margin-top: 3rem;
     margin-bottom: 3rem;
     font-size: 5.2rem;
 }
@@ -119,4 +135,65 @@ section {
 
 .about .about-img img {
     border-radius: 50%;
+}
+
+.experience {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+
+.experience .experience-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.experience-row .experience-column {
+    flex: 1 1 40rem;
+}
+
+.experience-column .title {
+    font-size: 2.5rem;
+    margin: 5rem 1rem 1.5rem 2rem;
+}
+
+.experience-column .education-box {
+    border-left: .2rem solid var(--main-color);
+}
+
+.education-box .education-content {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.education-content .content {
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid var(--text-color);
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.education-content .content .year {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.education-content .content .year i {
+    padding-right: .5rem;
+}
+
+.education-content .content h3 {
+    font-size: 2rem;
+}
+
+.education-content .content p {
+    font-size: 1.6rem;
+    padding-top: .5rem;
 }
