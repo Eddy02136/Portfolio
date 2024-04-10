@@ -1,8 +1,8 @@
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 70px; /* Réglage de la position du menu déroulant */
-    right: 20px; /* Réglage de la position du menu déroulant */
+    top: 0px; /* Réglage de la position du menu déroulant */
+    right: 0px; /* Réglage de la position du menu déroulant */
     background-color: #333;
     border-radius: 10px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
