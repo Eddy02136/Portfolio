@@ -1,6 +1,6 @@
 const menuIcon = document.getElementById('menuIcon'); // Utilisez 'menuIcon' au lieu de 'menu-icon'
 const dropdownMenu = document.querySelector('.dropdown-menu'); // Utilisez '.dropdown-menu' pour sélectionner par classe
-const experiencesLink = document.getElementById('experiencesLink');
+const aboutMeLink = document.getElementById('aboutMeLink');
 const worksLink = document.getElementById('worksLink');
 const presentationDiv = document.querySelector('.Presentation');
 
@@ -23,12 +23,12 @@ window.addEventListener('click', function(event) {
     }
 });
 
-// Ajoute un écouteur d'événements à l'objet 'experiencesLink' pour l'événement 'click'
-experiencesLink.addEventListener('click', function(event) {
+// Ajoute un écouteur d'événements à l'objet 'aboutMeLink' pour l'événement 'click'
+aboutMeLink.addEventListener('click', function(event) {
     // Empêche le comportement par défaut du lien (changement de page)
     event.preventDefault();
     // Utilise 'fetch' pour charger le contenu du fichier 'experiences.html'
-    fetch('../experiences.html')
+    fetch('../index.html')
         // Convertit la réponse en texte
         .then(response => response.text())
         // Utilise le texte de la réponse pour mettre à jour le contenu de 'presentationDiv'
