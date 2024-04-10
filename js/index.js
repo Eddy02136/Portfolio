@@ -2,7 +2,7 @@ const menuIcon = document.getElementById('menuIcon'); // Utilisez 'menuIcon' au 
 const dropdownMenu = document.querySelector('.dropdown-menu'); // Utilisez '.dropdown-menu' pour sélectionner par classe
 const experiencesLink = document.getElementById('experiencesLink');
 const worksLink = document.getElementById('worksLink');
-const presentationDiv = document.querySelector('.Presentation');
+const changingDiv = document.querySelector('.changing');
 
 // ouvrir le menu déroulant
 menuIcon.addEventListener('click', function() {
@@ -33,7 +33,7 @@ aboutMeLink.addEventListener('click', function(event) {
         .then(response => response.text())
         // Utilise le texte de la réponse pour mettre à jour le contenu de 'presentationDiv'
         .then(data => {
-            presentationDiv.innerHTML = data;
+            changingDiv.innerHTML = data;
         });
 });
 
@@ -47,7 +47,7 @@ experiencesLink.addEventListener('click', function(event) {
         .then(response => response.text())
         // Utilise le texte de la réponse pour mettre à jour le contenu de 'presentationDiv'
         .then(data => {
-            presentationDiv.innerHTML = data;
+            changingDiv.innerHTML = data;
         });
 });
 
@@ -61,6 +61,6 @@ worksLink.addEventListener('click', function(event) {
         .then(response => response.text())
         // Utilise le texte de la réponse pour mettre à jour le contenu de 'presentationDiv'
         .then(data => {
-            presentationDiv.innerHTML = data;
+            changingDiv.innerHTML = data;
         });
 });
