@@ -1,3 +1,14 @@
+.Presentation {
+    display: none;
+    position: relative; /* Ajout de position relative pour positionner l'icône de menu */
+    background-color: #333;
+    margin: 10px;
+    border-radius: 10%;
+    width: 1100px;
+    height: 800px;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
+}
+
 .dropdown-menu {
     display: flex;
     position: absolute;
@@ -6,7 +17,7 @@
     background-color: #333;
     border-radius: 10px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 10px;
+    padding: 0px;
 }
 
 .dropdown-menu a {
