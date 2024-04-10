@@ -30,10 +30,14 @@ window.addEventListener('click', function(event) {
 aboutMeLink.addEventListener('click', function(event) {
     // Empêche le comportement par défaut du lien (changement de page)
     event.preventDefault();
-    // Mettez à jour le contenu de la div 'presentationDiv' avec le contenu de la section "About Me"
-    // Ici, vous essayez d'assigner un chemin de fichier à 'innerHTML', ce qui ne fonctionnera pas comme prévu.
-    // Vous devriez utiliser 'fetch' pour charger le contenu du fichier, comme vous l'avez fait pour 'experiencesLink' et 'worksLink'.
-    presentationDiv.innerHTML = "../html/test.html";
+    // Utilise 'fetch' pour charger le contenu du fichier 'experiences.html'
+    fetch('../index.html')
+        // Convertit la réponse en texte
+        .then(response => response.text())
+        // Utilise le texte de la réponse pour mettre à jour le contenu de 'presentationDiv'
+        .then(data => {
+            presentationDiv.innerHTML = data;
+        });
 });
 
 // Ajoute un écouteur d'événements à l'objet 'experiencesLink' pour l'événement 'click'
